@@ -18,25 +18,51 @@ private:
     uint8_t _speed;                        // Velocidade do motor
 
 public:
-    // Construtor
+    /*!
+        @brief  Construtor
+
+        @param  pwmPin              Pino PWM
+        @param  clockwise           Pino para o sentido horário
+        @param  counterClockwise    Pino para o sentido anti-horário
+    */
     DC_Motor(uint8_t pwmPin, uint8_t clockwise, uint8_t counterClockwise);
 
-    // Método para setar a velocidade do motor (0 a 255)
+    /*!
+        @brief  Seta uma nova velocidade para o motor
+
+        @param  speed   Velocidade
+    */
     void setSpeed(uint8_t speed);
 
-    // Método que devolve o valor da velocidade do motor (0 a 255)
+    /*!
+        @brief  Retorna a velocidade atual do motor
+
+        @return Velocidade atual
+    */
     uint8_t getSpeed();
 
-    // Método que faz o motor ir para frente
+    /*!
+        @brief  Faz com que o motor vá para frente
+
+        @param  speed   Velocidade
+    */
     void forward(uint8_t speed);
 
-    // Método que faz o motor ir para trás
+    /*!
+        @brief  Faz com que o motor vá para trás
+
+        @param  speed   Velocidade
+    */
     void backwards(uint8_t speed);
 
-    // Método que para bruscamente o motor
+    /*!
+        @brief  Parada brusca do motor
+    */
     void shortBrake();
 
-    // Método que desacelera o motor
+    /*!
+        @brief  Desacelera o motor
+    */
     void stop();
 };
 
