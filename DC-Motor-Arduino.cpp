@@ -1,6 +1,6 @@
-// -- Implementação da classe Motor --
-// -- Plataforma: Arduino --
-// -- Autor: Allan Cedric --
+// -- DC Motor Class implementation --
+// -- Plataform: Arduino --
+// -- Author: Allan Cedric --
 
 #include "DC-Motor-Arduino.h"
 
@@ -9,10 +9,10 @@ DC_Motor::DC_Motor(uint8_t pwmPin, uint8_t clockwise, uint8_t counterClockwise)
     _pwmPin = pwmPin;
     _clockwise = clockwise;
     _counterClockwise = counterClockwise;
-    pinMode(_pwmPin, OUTPUT);           // Seta o pino PWM como OUTPUT
-    pinMode(_clockwise, OUTPUT);        // Seta o pino clockwise como OUTPUT
-    pinMode(_counterClockwise, OUTPUT); // Seta o pino counterclockwise como OUTPUT
-    DC_Motor::stop();                   // Motor inicializa com velocidade nula
+    pinMode(_pwmPin, OUTPUT);
+    pinMode(_clockwise, OUTPUT);
+    pinMode(_counterClockwise, OUTPUT);
+    DC_Motor::stop(); // Motor starts stopped
 }
 
 void DC_Motor::setSpeed(uint8_t speed)

@@ -1,67 +1,67 @@
-// -- Classe que molda o comportamento de motores DC simples --
-// -- Plataforma: Arduino --
-// -- Autor: Allan Cedric --
+// -- DC Motor Class to control a real DC Motor --
+// -- Platform: Arduino --
+// -- Author: Allan Cedric --
 
 #ifndef __DC_MOTOR_ARDUINO_H__
 #define __DC_MOTOR_ARDUINO_H__
 
-// -- Bibliotecas --
+// -- Libraries --
 #include <Arduino.h>
 
-// -- Classe DC_Motor --
+// -- DC Motor Class --
 class DC_Motor
 {
 
 private:
-    uint8_t _pwmPin;                       // Pino PWM do motor p/ controle de velocidade
-    uint8_t _clockwise, _counterClockwise; // Pinos para setar o sentido do motor
-    uint8_t _speed;                        // Velocidade do motor
+    uint8_t _pwmPin;                       // PWM pin to control motor's speed
+    uint8_t _clockwise, _counterClockwise; // Digital pins to control motor's rotation
+    uint8_t _speed;                        // Motor's speed
 
 public:
     /*!
-        @brief  Construtor
+        @brief  Constructor
 
-        @param  pwmPin              Pino PWM
-        @param  clockwise           Pino para o sentido horário
-        @param  counterClockwise    Pino para o sentido anti-horário
+        @param  pwmPin              PWM pin
+        @param  clockwise           Digital pin for clockwise rotation
+        @param  counterClockwise    Digital pin for counter clockwise rotation
     */
     DC_Motor(uint8_t pwmPin, uint8_t clockwise, uint8_t counterClockwise);
 
     /*!
-        @brief  Seta uma nova velocidade para o motor
+        @brief  Set a new speed to motor
 
-        @param  speed   Velocidade
+        @param  speed   Desired speed
     */
     void setSpeed(uint8_t speed);
 
     /*!
-        @brief  Retorna a velocidade atual do motor
+        @brief  Get motor's speed
 
-        @return Velocidade atual
+        @return Current speed
     */
     uint8_t getSpeed();
 
     /*!
-        @brief  Faz com que o motor vá para frente
+        @brief  Motor goes forward
 
-        @param  speed   Velocidade
+        @param  speed   Desired speed
     */
     void forward(uint8_t speed);
 
     /*!
-        @brief  Faz com que o motor vá para trás
+        @brief  Motor goes backwards
 
-        @param  speed   Velocidade
+        @param  speed   Desired speed
     */
     void backwards(uint8_t speed);
 
     /*!
-        @brief  Parada brusca do motor
+        @brief  Brake the motor
     */
     void shortBrake();
 
     /*!
-        @brief  Desacelera o motor
+        @brief  Stop the motor
     */
     void stop();
 };
