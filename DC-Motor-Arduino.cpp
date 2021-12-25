@@ -12,7 +12,6 @@ DC_Motor::DC_Motor(uint8_t pwmPin, uint8_t clockwise, uint8_t counterClockwise)
     pinMode(_pwmPin, OUTPUT);
     pinMode(_clockwise, OUTPUT);
     pinMode(_counterClockwise, OUTPUT);
-    DC_Motor::stop(); // Motor starts stopped
 }
 
 void DC_Motor::setSpeed(uint8_t speed)
