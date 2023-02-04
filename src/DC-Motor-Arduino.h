@@ -5,7 +5,6 @@
 #ifndef __DC_MOTOR_ARDUINO_H__
 #define __DC_MOTOR_ARDUINO_H__
 
-// -- Libraries --
 #include <Arduino.h>
 
 // -- DC Motor Class --

@@ -1,0 +1,20 @@
+{
+    "name": "DC-Motor-Arduino",
+    "version": "1.0.0",
+    "description": "Library to control a DC Motor on Arduino platform with a motor driver like TB6612FNG",
+    "keywords": "dc motor, motor, arduino",
+    "repository":
+    {
+        "type": "git",
+        "url": "https://github.com/allan-cedric/DC-Motor-Arduino.git"
+    },
+    "authors":
+    {
+        "name": "Allan Cedric",
+        "email": "allan.py3000@gmail.com"
+    },
+    "license": "MIT",
+    "frameworks": "arduino",
+    "platforms": "atmelavr",
+    "headers": "DC-Motor-Arduino.h"
+}

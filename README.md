@@ -1,5 +1,5 @@
 ## DC-Motor Library (C/C++)
-* Simple library to control a DC Motor on Arduino platform
+* Library to control a DC Motor on Arduino platform with a motor driver like TB6612FNG
    
 ## How to use ?   
 * Include the library and call the constructor `DC_Motor`:
